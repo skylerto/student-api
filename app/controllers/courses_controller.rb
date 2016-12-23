@@ -16,7 +16,7 @@ class CoursesController < ApplicationController
   # POST /courses
   def create
     @course = Course.new(course_params)
-    @course.marks.each do |mark|
+    course_params.marks.each do |mark|
       mark.save
     end
     if @course.save
