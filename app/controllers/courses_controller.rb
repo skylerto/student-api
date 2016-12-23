@@ -16,7 +16,7 @@ class CoursesController < ApplicationController
   # POST /courses
   def create
     @course = Course.new(course_params)
-
+    puts @course
     if @course.save
       render json: @course, status: :created, location: @course
     else
