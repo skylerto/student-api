@@ -46,6 +46,6 @@ class MarksController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def mark_params
-      params.require(:mark).permit(:title, :weight, :mark)
+      params.permit(:title, :weight, :mark, :course_id)
     end
 end
